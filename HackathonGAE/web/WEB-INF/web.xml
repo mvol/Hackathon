@@ -9,9 +9,16 @@
         <servlet-name>MainServlet</servlet-name>
         <servlet-class>de.hdm.jsse.MainServlet</servlet-class>
     </servlet>
-
+    <servlet>
+        <servlet-name>SetupServlet</servlet-name>
+        <servlet-class>de.hdm.jsse.SetupServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>MainServlet</servlet-name>
-        <url-pattern>/</url-pattern>
+        <url-pattern>/main</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SetupServlet</servlet-name>
+        <url-pattern>/setup</url-pattern>
     </servlet-mapping>
 </web-app>

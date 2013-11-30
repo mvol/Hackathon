@@ -8,6 +8,8 @@ import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 import java.util.Collection;
+import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.Set;
 
 /**
@@ -38,15 +40,21 @@ public class Person {
     String surname;
 
     @Persistent
-    Collection<Badge> badges;
+    Collection<Badge> badges = new LinkedList<Badge>();
 
     @Persistent
-    Set<Key> subscribedEvents;
+    Set<Key> subscribedEvents = new HashSet<Key>();
 
     @Persistent
-    Set<Set> subscribedCategories;
+    Set<Key> subscribedCategories = new HashSet<Key>();
 
     @Persistent
     private Blob profilePic;
 
+    public Person(String username, String password, String forename, String surname) {
+        this.username = username;
+        this.password = password;
+        this.forename = forename;
+        this.surname = surname;
+    }
 }
