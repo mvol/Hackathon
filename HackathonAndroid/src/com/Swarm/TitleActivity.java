@@ -1,30 +1,43 @@
 package com.Swarm;
 
 import android.app.Activity;
+import android.app.FragmentManager;
 import android.os.Bundle;
-import android.widget.ListView;
+import android.widget.LinearLayout;
 import com.example.HackathonAndroid.R;
 
-
-public class TitleActivity extends Activity {
-    private ListView courseList;
+public abstract class TitleActivity extends Activity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
+        EventElementView ev1 = new EventElementView(this, "Mathe", "Morgen um 1", R.drawable.icon);
+        EventElementView ev2 = new EventElementView(this, "Mathe", "Morgen um 1", R.drawable.icon);
+        EventElementView ev3 = new EventElementView(this, "Mathe", "Morgen um 1", R.drawable.icon);
+        EventElementView ev4 = new EventElementView(this, "Mathe", "Morgen um 1", R.drawable.icon);
+        EventElementView ev5 = new EventElementView(this, "Mathe", "Morgen um 1", R.drawable.icon);
+        EventElementView ev6 = new EventElementView(this, "Mathe", "Morgen um 1", R.drawable.icon);
+        EventElementView ev7 = new EventElementView(this, "Mathe", "Morgen um 1", R.drawable.icon);
+        EventElementView ev8 = new EventElementView(this, "Mathe", "Morgen um 1", R.drawable.icon);
+        EventElementView ev9 = new EventElementView(this, "Mathe", "Morgen um 1", R.drawable.icon);
+        EventElementView ev10 = new EventElementView(this, "Mathe", "Morgen um 1", R.drawable.icon);
 
-        EventElement[] events = new EventElement[]{
-                new EventElement(R.drawable.icon, "Mathe2 Treffen", "Morgen um 3!"),
-                new EventElement(R.drawable.icon, "Mathe1 Treffen", "Freu mich auf viele Gäste"),
-                new EventElement(R.drawable.icon, "Mathe1 Treffen", "Freu mich auf viele Gäste"),
-                new EventElement(R.drawable.icon, "Mathe1 Treffen", "Freu mich auf viele Gäste"),
-        };
-
-        EventElementAdapter adapter = new EventElementAdapter(this, R.layout.view_event_item, events);
-        courseList = (ListView) findViewById(R.id.courseList);
-        courseList.setAdapter(adapter);
+        LinearLayout l = (LinearLayout) findViewById(R.id.courseList);
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.FILL_PARENT,
+                LinearLayout.LayoutParams.FILL_PARENT);
+        l.addView(ev1, params);
+        l.addView(ev2, params);
+        l.addView(ev3, params);
+        l.addView(ev4, params);
+        l.addView(ev5, params);
+        l.addView(ev6, params);
+        l.addView(ev7, params);
+        l.addView(ev8, params);
+        l.addView(ev9, params);
+        l.addView(ev10, params);
 
     }
 }

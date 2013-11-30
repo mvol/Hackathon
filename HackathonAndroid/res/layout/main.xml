@@ -3,37 +3,63 @@
 <ScrollView
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/scrollView">
-
-  <TextView
-      android:layout_width="fill_parent"
-      android:layout_height="48dp"
-      android:textSize="16dp"
-      android:id="@+id/courseHeading"
-      />
+    xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/scrollView"
+    android:background="#00FF00">
 
   <LinearLayout
-      android:id="@+id/courseList"
-      android:showDividers="middle"
-      android:divider="?android:attr/listDivider"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
       android:orientation="vertical"
-      android:layout_width="fill_parent"
-      android:layout_height="wrap_content">
-  </LinearLayout>
+      android:background="#FF0000"
+      >
 
-  <TextView
-      android:layout_width="fill_parent"
-      android:layout_height="48dp"
-      android:id="@+id/miscHeading"
-      />
 
-  <LinearLayout
-      android:id="@+id/miscList"
-      android:showDividers="middle"
-      android:divider="?android:attr/listDivider"
-      android:orientation="vertical"
-      android:layout_width="fill_parent"
-      android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="36dp"
+        android:text="Kursbezogene Treffen"
+        android:paddingTop="2dp"
+        android:paddingLeft="8dp"
+        android:paddingBottom="2dp"
+        android:textColor="#CC133C"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:background="#FFFFFF"
+        android:id="@+id/courseHeading"
+        />
+
+     <LinearLayout
+        android:id="@+id/courseList"
+        android:showDividers="middle"
+        android:divider="?android:attr/listDivider"
+        android:orientation="vertical"
+        android:background="#967B80"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="24dp"
+        android:background="#AD3E53"
+        android:id="@+id/miscHeading"
+        android:paddingLeft="5dp"
+        android:text="Sonstige Treffen"
+        android:textSize="16dp"
+        android:paddingTop="5dp"
+        android:textColor="#302D2E"
+        />
+
+    <LinearLayout
+        android:id="@+id/miscList"
+        android:showDividers="middle"
+        android:background="#967B80"
+        android:divider="?android:attr/listDivider"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+    </LinearLayout>
+
   </LinearLayout>
 
 </ScrollView>

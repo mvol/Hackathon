@@ -18,6 +18,16 @@
     <orderEntry type="library" name="google-play-services" level="project" />
     <orderEntry type="module" module-name="appcompat" />
     <orderEntry type="library" name="android-support-v7-appcompat" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/appcompat/libs" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/appcompat/libs" recursive="false" />
+      </library>
+    </orderEntry>
   </component>
 </module>
 
