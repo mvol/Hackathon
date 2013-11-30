@@ -1,44 +1,36 @@
 package com.Swarm;
 
 import android.app.Activity;
-import android.app.FragmentManager;
 import android.os.Bundle;
 import android.widget.LinearLayout;
 import com.example.HackathonAndroid.R;
 
-public abstract class TitleActivity extends Activity {
+import java.util.ArrayList;
+
+public class TitleActivity extends Activity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        EventElementProperty[] eventData = new EventElementProperty[]{
+                new EventElementProperty("Mathe II Integrale", "13.12. um 13:00", R.drawable.icon),
 
-        EventElementView ev1 = new EventElementView(this, "Mathe", "Morgen um 1", R.drawable.icon);
-        EventElementView ev2 = new EventElementView(this, "Mathe", "Morgen um 1", R.drawable.icon);
-        EventElementView ev3 = new EventElementView(this, "Mathe", "Morgen um 1", R.drawable.icon);
-        EventElementView ev4 = new EventElementView(this, "Mathe", "Morgen um 1", R.drawable.icon);
-        EventElementView ev5 = new EventElementView(this, "Mathe", "Morgen um 1", R.drawable.icon);
-        EventElementView ev6 = new EventElementView(this, "Mathe", "Morgen um 1", R.drawable.icon);
-        EventElementView ev7 = new EventElementView(this, "Mathe", "Morgen um 1", R.drawable.icon);
-        EventElementView ev8 = new EventElementView(this, "Mathe", "Morgen um 1", R.drawable.icon);
-        EventElementView ev9 = new EventElementView(this, "Mathe", "Morgen um 1", R.drawable.icon);
-        EventElementView ev10 = new EventElementView(this, "Mathe", "Morgen um 1", R.drawable.icon);
+        };
+
+        ArrayList<EventElementView> eventViews= new ArrayList<EventElementView>();
+        for(int i = 0; i <= 10; i++){
+            eventViews.add(new EventElementView(this, eventData[0]));
+        }
 
         LinearLayout l = (LinearLayout) findViewById(R.id.courseList);
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.FILL_PARENT,
                 LinearLayout.LayoutParams.FILL_PARENT);
-        l.addView(ev1, params);
-        l.addView(ev2, params);
-        l.addView(ev3, params);
-        l.addView(ev4, params);
-        l.addView(ev5, params);
-        l.addView(ev6, params);
-        l.addView(ev7, params);
-        l.addView(ev8, params);
-        l.addView(ev9, params);
-        l.addView(ev10, params);
 
+        for (EventElementView eventView : eventViews) {
+          l.addView(eventView, params);
+        }
     }
 }
 

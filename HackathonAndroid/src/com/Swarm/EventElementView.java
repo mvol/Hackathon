@@ -1,19 +1,20 @@
 package com.Swarm;
 
-import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.example.HackathonAndroid.R;
 
-public class EventElementView extends LinearLayout {
-    public EventElementView(Context context, String heading, String subheading, int imgSrc) {
+public class EventElementView extends LinearLayout implements View.OnClickListener {
+    public EventElementView(Context context, EventElementProperty attributes) {
         super(context);
-
-        setOrientation(LinearLayout.VERTICAL);
-        // setGravity(Gravity.CENTER_VERTICAL);
+        String heading = attributes.heading;
+        String subheading = attributes.subheading;
+        int imgSrc = attributes.imgSrc;
+        this.setOnClickListener(this);
 
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         inflater.inflate(R.layout.view_event_item, this, true);
@@ -24,5 +25,10 @@ public class EventElementView extends LinearLayout {
         subheadingView.setText(subheading);
         ImageView picView = (ImageView) findViewById(R.id.imgIcon);
         picView.setImageResource(imgSrc);
+    }
+
+    @Override
+    public void onClick(View v) {
+
     }
 }
