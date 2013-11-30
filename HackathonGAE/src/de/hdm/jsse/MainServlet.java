@@ -18,13 +18,18 @@ import java.io.IOException;
  */
 public class MainServlet extends HttpServlet {
     protected void doPost(HttpServletRequest httpRequest, HttpServletResponse httpResponse) throws ServletException, IOException {
+        /*
         Gson gson = new Gson();
+
 
         String requestString = httpRequest.getParameter("request");
         Request request = gson.fromJson(requestString, Request.class);
 
         String response = process(request);
+        */
 
+        httpResponse.setContentType("text/plain");
+        httpResponse.getWriter().println("Hello, world, this is JSSM!");
     }
 
     private String process(Request request) {
@@ -45,8 +50,9 @@ public class MainServlet extends HttpServlet {
         return null;
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+    protected void doGet(HttpServletRequest httpRequest, HttpServletResponse httpResponse) throws ServletException, IOException {
+        httpResponse.setContentType("text/plain");
+        httpResponse.getWriter().println("Hello, world, this is JSSM!");
     }
 
 

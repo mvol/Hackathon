@@ -9,4 +9,9 @@
         <servlet-name>MainServlet</servlet-name>
         <servlet-class>de.hdm.jsse.MainServlet</servlet-class>
     </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MainServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
 </web-app>
