@@ -11,6 +11,11 @@ import java.util.Map;
  */
 public class Request {
 
+    public Request(int action, Map<String, Object> parameters){
+        this.action = action;
+        this.parameters = parameters;
+    }
+
     int action;
     Map<String, Object> parameters;
 

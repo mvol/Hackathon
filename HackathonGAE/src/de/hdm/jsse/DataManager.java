@@ -1,5 +1,7 @@
 package de.hdm.jsse;
 
+import com.google.appengine.api.datastore.Key;
+
 import javax.jdo.PersistenceManager;
 
 /**
@@ -22,7 +24,6 @@ public class DataManager {
         PersistenceManager pm = PMF.get().getPersistenceManager();
 
         Person newPerson = new Person(username, password, forename, surname);
-
         try{
             pm.makePersistent(newPerson);
         }catch(Exception e){
@@ -31,6 +32,28 @@ public class DataManager {
         }finally {
             pm.close();
         }
+
+        return true;
+    }
+
+    public boolean createEvent(String name, String desc, Key category){
+        PersistenceManager pm = PMF.get().getPersistenceManager();
+
+        Event newEvent = new Event();
+        try{
+            pm.makePersistent(newEvent);
+        }catch(Exception e){
+            e.printStackTrace();
+            return false;
+        }finally {
+            pm.close();
+        }
+        return true;
+    }
+
+
+    public boolean createCategory(String name){
+
 
         return true;
     }
