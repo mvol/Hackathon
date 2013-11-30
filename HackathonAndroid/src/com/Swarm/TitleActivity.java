@@ -1,14 +1,31 @@
 package com.Swarm;
+
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.widget.ListView;
 import com.example.HackathonAndroid.R;
 
 
-public class TitleActivity extends ActionBarActivity {
+public class TitleActivity extends Activity {
+    private ListView courseList;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+
+
+        EventElement[] events = new EventElement[]{
+                new EventElement(R.drawable.icon, "Mathe2 Treffen", "Morgen um 3!"),
+                new EventElement(R.drawable.icon, "Mathe1 Treffen", "Freu mich auf viele Gäste"),
+                new EventElement(R.drawable.icon, "Mathe1 Treffen", "Freu mich auf viele Gäste"),
+                new EventElement(R.drawable.icon, "Mathe1 Treffen", "Freu mich auf viele Gäste"),
+        };
+
+        EventElementAdapter adapter = new EventElementAdapter(this, R.layout.view_event_item, events);
+        courseList = (ListView) findViewById(R.id.courseList);
+        courseList.setAdapter(adapter);
+
     }
 }
 

@@ -2,21 +2,38 @@
 
 <ScrollView
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="fill_parent"
     xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/scrollView">
-  <LinearLayout
-      android:orientation="horizontal"
+
+  <TextView
       android:layout_width="fill_parent"
-      android:layout_height="fill_parent">
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
-    </LinearLayout>
+      android:layout_height="48dp"
+      android:textSize="16dp"
+      android:id="@+id/courseHeading"
+      />
+
+  <LinearLayout
+      android:id="@+id/courseList"
+      android:showDividers="middle"
+      android:divider="?android:attr/listDivider"
+      android:orientation="vertical"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content">
   </LinearLayout>
+
+  <TextView
+      android:layout_width="fill_parent"
+      android:layout_height="48dp"
+      android:id="@+id/miscHeading"
+      />
+
+  <LinearLayout
+      android:id="@+id/miscList"
+      android:showDividers="middle"
+      android:divider="?android:attr/listDivider"
+      android:orientation="vertical"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content">
+  </LinearLayout>
+
 </ScrollView>
