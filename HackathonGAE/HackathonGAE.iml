@@ -32,7 +32,7 @@
     <orderEntry type="library" scope="PROVIDED" name="AppEngine Dev" level="application_server_libraries" />
     <orderEntry type="library" name="AppEngine API" level="project" />
     <orderEntry type="library" name="AppEngine ORM" level="project" />
-    <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
+    <orderEntry type="library" name="gson-2.2.4" level="project" />
   </component>
 </module>
 
