@@ -16,19 +16,26 @@ import java.io.IOException;
  */
 public class MainServlet extends HttpServlet {
     protected void doPost(HttpServletRequest httpRequest, HttpServletResponse httpResponse) throws IOException {
+        System.out.println("INCOMING CONNECTION: POST");
+        System.out.println("REQUEST IS: "+httpRequest.getParameter("content"));
         Gson gson = new Gson();
 
-        String requestString = httpRequest.getParameter("request");
-        Request request = gson.fromJson(requestString, Request.class);
+        String requestString = httpRequest.getParameter("content");
+        TransferContainer transferContainer = gson.fromJson(requestString, TransferContainer.class);
 
-        String response = process(request);
+        String response = process(transferContainer);
+        httpResponse.setContentType("text/plain");
+        httpResponse.getWriter().print(response);
     }
 
-    private String process(Request request) {
-        switch(request.action){
+    private String process(TransferContainer transferContainer) {
+        String out = "";
+
+        switch(transferContainer.action){
             case JSSEProtocol.ACTION_REGISTER:
                 break;
             case JSSEProtocol.ACTION_LOGIN:
+                out += "Tried to login as "+transferContainer.parameters.get("username");
                 break;
             case JSSEProtocol.ACTION_GET_EVENTS:
                 break;
@@ -36,11 +43,11 @@ public class MainServlet extends HttpServlet {
                 break;
         }
 
-        return null;  //To change body of created methods use File | Settings | File Templates.
+        return out;  //To change body of created methods use File | Settings | File Templates.
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-
+        System.out.println("INCOMING CONNECTION: GET");
         response.setContentType("text/plain");
         response.getWriter().println("Hello, world");
 

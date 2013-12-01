@@ -7,6 +7,7 @@ import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.Set;
 
 /**
@@ -27,8 +28,12 @@ public class Category {
     String name;
 
     @Persistent
-    Set<Key> subscribedPersons;
+    Set<Key> subscribedPersons = new HashSet<Key>();
 
     @Persistent
-    Set<Key> events;
+    Set<Key> events = new HashSet<Key>();
+
+    public Category(String name) {
+        this.name = name;
+    }
 }

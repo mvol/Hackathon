@@ -5,10 +5,14 @@
           android:versionName="1.0">
     <uses-sdk android:minSdkVersion="8"/>
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"></uses-permission>
+    <uses-permission android:name="android.permission.WAKE_LOCK"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"></uses-permission>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"></uses-permission>
 
     <permission android:name="com.example.gcm.permission.C2D_MESSAGE"
                 android:protectionLevel="signature" />
@@ -18,15 +22,14 @@
                  android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
                  android:uiOptions="splitActionBarWhenNarrow">
         <activity android:name="com.Swarm.TestActivity">
-          <meta-data android:name="android.support.UI_OPTIONS"
-                     android:value="splitActionBarWhenNarrow" />
+            <meta-data android:name="android.support.UI_OPTIONS"
+                       android:value="splitActionBarWhenNarrow" />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-      <activity android:name="com.Swarm.TitleActivity"
-                android:theme="@style/Theme.AppCompat.Light">
+      <activity android:name="com.Swarm.TitleActivity">
         <intent-filter>
           <action android:name="android.intent.action.MAIN"/>
           <category android:name="android.intent.category.LAUNCHER"/>
@@ -38,7 +41,18 @@
               <category android:name="android.intent.category.LAUNCHER"/>
           </intent-filter>
       </activity>
+      <activity android:name="com.Swarm.ListEventsActivity" />
       <activity android:name="com.Swarm.EventDetailsActivity"/>
+      <activity android:name="com.Swarm.CreateEventActivity">
+        <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.Swarm.TitleActivity" />
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN"/>
+            <category android:name="android.intent.category.LAUNCHER"/>
+        </intent-filter>
+      </activity>
+
 
       <!--
         <receiver

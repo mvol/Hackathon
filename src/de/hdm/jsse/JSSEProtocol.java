@@ -18,4 +18,5 @@ public final class JSSEProtocol {
     public static final int ACTION_JOIN_EVENT = 7;
     public static final int ACTION_LEAVE_EVENT = 8;
 
+    public static final int RESPONSE_EVENTS = 0;
 }

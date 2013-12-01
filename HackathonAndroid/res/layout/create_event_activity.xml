@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Allgmeines"
+                android:id="@+id/textView" android:layout_gravity="left|center_vertical" android:textColor="#cc133c"
+                android:textSize="16dp" android:textStyle="bold" android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"/>
+        <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="2dp" android:background="#cc133c">
+        </FrameLayout>
+        <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Kurs"
+                android:id="@+id/editText" android:layout_marginLeft="10dp" android:layout_marginRight="10dp"/>
+        <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Titel"
+                android:id="@+id/editText1" android:layout_marginLeft="10dp" android:layout_marginRight="10dp"/>
+        <EditText android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="01.12.2013"
+                  android:id="@+id/editText3" android:layout_marginLeft="10dp" android:layout_marginRight="10dp"/>
+        <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Uhrzeit"
+                android:id="@+id/editText2" android:layout_marginLeft="10dp" android:layout_marginRight="10dp"/>
+        <EditText android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Ort"
+                  android:id="@+id/editText4" android:layout_marginLeft="10dp" android:layout_marginRight="10dp"/>
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Beschreibung"
+                  android:id="@+id/textView1" android:textColor="#cc133c"
+                  android:textSize="16dp" android:textStyle="bold" android:layout_marginTop="20dp"
+                  android:layout_marginLeft="10dp"/>
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="2dp" android:background="#cc133c"
+                     android:id="@+id/frameLayout"/>
+        <EditText android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Beschreibung"
+                  android:id="@+id/editText5" android:layout_marginLeft="10dp" android:layout_marginRight="10dp"/>
+        <EditText android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Tags"
+                  android:id="@+id/editText6" android:layout_marginLeft="10dp" android:layout_marginRight="10dp"/>
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Teilnehmer"
+                  android:id="@+id/textView2" android:textColor="#cc133c" android:textSize="16dp"
+                  android:textStyle="bold" android:layout_marginTop="20dp" android:layout_marginLeft="10dp"/>
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="2dp" android:background="#cc133c"
+                     android:id="@+id/frameLayout1"/>
+        <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="maximale Teilnehmerzahl"
+                android:id="@+id/editText7" android:layout_gravity="center" android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+    </LinearLayout>
+</ScrollView>

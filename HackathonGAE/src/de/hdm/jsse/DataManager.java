@@ -53,8 +53,26 @@ public class DataManager {
 
 
     public boolean createCategory(String name){
+        PersistenceManager pm = PMF.get().getPersistenceManager();
 
+        Category newCategory = new Category(name);
+        try{
+            pm.makePersistent(newCategory);
+        }catch(Exception e){
+            e.printStackTrace();
+            return false;
+        }finally {
+            pm.close();
+        }
 
         return true;
+    }
+
+    public Category getCategory(String name){
+
+
+
+
+        return null;
     }
 }

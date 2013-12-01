@@ -1,10 +1,13 @@
 package com.Swarm;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.example.HackathonAndroid.R;
@@ -69,6 +72,20 @@ public class TitleActivity extends ActionBarActivity {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_action, menu);
         return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            // Respond to the action bar's Up/Home button
+            case R.id.action_add:
+
+                Intent intent = new Intent(this, CreateEventActivity.class);
+                startActivity(intent);
+
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
 

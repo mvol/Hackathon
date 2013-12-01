@@ -9,14 +9,17 @@ import java.util.Map;
  * Time: 19:07
  * To change this template use File | Settings | File Templates.
  */
-public class Request {
+public class TransferContainer {
+    public TransferContainer(){
 
-    public Request(int action, Map<String, Object> parameters){
+    }
+
+    public TransferContainer(int action, Map<String, Object> parameters){
         this.action = action;
         this.parameters = parameters;
     }
 
-    int action;
+    public int action;
     Map<String, Object> parameters;
 
 

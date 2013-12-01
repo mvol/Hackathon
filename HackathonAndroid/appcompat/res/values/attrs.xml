@@ -229,7 +229,7 @@
              move focus to a view; by setting this attribute to true the view is
              allowed to take focus.  This value does not impact the behavior of
              directly calling {@link android.view.View#requestFocus}, which will
-             always request focus regardless of this view.  It only impacts where
+             always transferContainer focus regardless of this view.  It only impacts where
              focus navigation will try to move focus. -->
         <attr name="android:focusable" />
     </declare-styleable>

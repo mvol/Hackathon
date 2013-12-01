@@ -22,11 +22,19 @@ public class SetupServlet extends HttpServlet {
         DataManager dm = DataManager.getInstance();
         response.setContentType("text/plain");
 
+        /*
         if(dm.createUser("mvol", "password", "Malte", "Vollmerhausen")){
             response.getWriter().println("added person....");
         }else{
             response.getWriter().println("add person failed.");
         }
+        */
+
+        dm.createCategory("Mathematik");
+        dm.createCategory("Physik");
+        dm.createCategory("Informatik");
+        dm.createCategory("Elektonik");
+        dm.createCategory("Filmgeschichte");
 
 
 
