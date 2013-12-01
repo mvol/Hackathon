@@ -5,4 +5,7 @@
   <item android:id="@+id/action_add"
         android:icon="@drawable/ic_menu_add"
         myapp:showAsAction="ifRoom"/>
+  <item android:id="@+id/action_profile"
+        android:icon="@drawable/ic_menu_cc_am"
+        myapp:showAsAction="ifRoom"/>
 </menu>

@@ -1,9 +1,10 @@
 package com.Swarm;
 
+//import android.app.ActionBar;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.v4.app.NavUtils;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -66,7 +67,8 @@ public class TitleActivity extends ActionBarActivity {
         l2.addView(new EventElementView(this,
                 new EventElementProperty("Nachtspaziergang", "Samstag, 00:00, Allmandring 43", R.drawable.profil04)), params);
         l2.addView(new EventElementView(this,
-                new EventElementProperty("Film schauen im Metropol", "3.12.., 19:00, Metropol Kino", R.drawable.profil03)), params);    }
+                new EventElementProperty("Film schauen im Metropol", "3.12.., 19:00, Metropol Kino", R.drawable.profil03)), params);
+     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
