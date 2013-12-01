@@ -1,21 +1,25 @@
 package com.Swarm;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 import com.example.HackathonAndroid.R;
 
 public class EventElementView extends LinearLayout implements View.OnClickListener {
+    String heading;
+    String subheading;
+    int imgSrc;
+
     public EventElementView(Context context, EventElementProperty attributes) {
         super(context);
-        String heading = attributes.heading;
-        String subheading = attributes.subheading;
-        int imgSrc = attributes.imgSrc;
+        this.heading = attributes.heading;
+        this.subheading = attributes.subheading;
+        this.imgSrc = attributes.imgSrc;
         this.setOnClickListener(this);
 
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -43,6 +47,10 @@ public class EventElementView extends LinearLayout implements View.OnClickListen
 
     @Override
     public void onClick(View v) {
-
+        Intent intent = new Intent(v.getContext(), EventDetailsActivity.class);
+        intent.putExtra("event heading", heading);
+        intent.putExtra("event subheading", subheading);
+        intent.putExtra("profilePic", imgSrc);
+        v.getContext().startActivity(intent);
     }
 }
