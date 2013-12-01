@@ -40,6 +40,7 @@ public class LoginActivity extends Activity {
 
     public void login(String username, String password){
         Intent intent = new Intent(this, TitleActivity.class);
+        intent.putExtra(TitleActivity.INTENT_ACTION, TitleActivity.INTENT_ACTION_LOGIN);
         intent.putExtra(USERNAME, username);
         intent.putExtra(PASSWORD, password);
         startActivity(intent);

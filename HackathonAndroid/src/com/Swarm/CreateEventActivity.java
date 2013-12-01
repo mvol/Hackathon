@@ -8,6 +8,8 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import com.example.HackathonAndroid.R;
 
 /**
@@ -22,6 +24,22 @@ public class CreateEventActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.create_event_activity);
         getActionBar().setDisplayHomeAsUpEnabled(true);
+        Button b_create = (Button)findViewById(R.id.b_create);
+
+        b_create.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), TitleActivity.class);
+
+                intent.putExtra(ListEventsActivity.INTENT_ACTION, ListEventsActivity.INTENT_ACTION_CREATE);
+
+                startActivity(intent);
+            }
+        }
+        );
+
+
+
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {

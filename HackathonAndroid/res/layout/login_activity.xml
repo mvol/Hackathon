@@ -3,13 +3,13 @@
 <LinearLayout
 xmlns:android="http://schemas.android.com/apk/res/android"
 android:layout_width="fill_parent"
-android:layout_height="fill_parent" android:orientation="vertical">
+android:layout_height="fill_parent" android:orientation="vertical" android:background="#ffffff">
 
     <ImageView
             android:layout_width="fill_parent"
             android:layout_height="150dp"
             android:id="@+id/imageView" android:scaleType="centerInside"
-            android:src="@drawable/logo" android:layout_marginTop="10dp"/>
+            android:src="@drawable/logo" android:layout_marginTop="10dp" android:background="#ffffff"/>
     <FrameLayout
             android:layout_width="fill_parent"
             android:layout_height="15dp" android:background="#cc133c" android:layout_marginBottom="30dp">

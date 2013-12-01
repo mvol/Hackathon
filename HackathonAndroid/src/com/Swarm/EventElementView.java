@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 import com.example.HackathonAndroid.R;
 
 public class EventElementView extends LinearLayout implements View.OnClickListener {
@@ -28,6 +29,16 @@ public class EventElementView extends LinearLayout implements View.OnClickListen
         picView.setImageResource(imgSrc);
         Typeface tf = Typeface.create("Roboto-Regular", Typeface.NORMAL);
         headingView.setTypeface(tf);
+
+        this.setFocusable(true);
+        this.setFocusableInTouchMode(true);
+
+        this.setOnFocusChangeListener(new OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                // Toast.makeText(v.getContext().getApplicationContext(), "focus!", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override

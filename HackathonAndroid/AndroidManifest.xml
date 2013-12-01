@@ -29,13 +29,13 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-      <activity android:name="com.Swarm.TitleActivity">
+      <activity android:name="com.Swarm.TitleActivity" android:screenOrientation="portrait">
         <intent-filter>
           <action android:name="android.intent.action.MAIN"/>
           <category android:name="android.intent.category.LAUNCHER"/>
         </intent-filter>
       </activity>
-      <activity android:name="com.Swarm.LoginActivity">
+      <activity android:name="com.Swarm.LoginActivity" android:screenOrientation="portrait">
           <intent-filter>
               <action android:name="android.intent.action.MAIN"/>
               <category android:name="android.intent.category.LAUNCHER"/>
@@ -46,25 +46,26 @@
       <activity android:name="com.Swarm.CreateEventActivity">
         <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.Swarm.TitleActivity" />
+                android:value="com.Swarm.TitleActivity" />
         <intent-filter>
             <action android:name="android.intent.action.MAIN"/>
             <category android:name="android.intent.category.LAUNCHER"/>
         </intent-filter>
       </activity>
+        <activity android:name="com.Swarm.ProfileActivity"/>
 
 
-      <!--
-        <receiver
-                android:name=".GcmBroadcastReceiver"
-                android:permission="com.google.android.c2dm.permission.SEND" >
-            <intent-filter>
-                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-                <category android:name="com.example.gcm" />
-            </intent-filter>
-        </receiver>
-        <service android:name=".GcmIntentService" />
-        -->
+        <!--
+          <receiver
+                  android:name=".GcmBroadcastReceiver"
+                  android:permission="com.google.android.c2dm.permission.SEND" >
+              <intent-filter>
+                  <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                  <category android:name="com.example.gcm" />
+              </intent-filter>
+          </receiver>
+          <service android:name=".GcmIntentService" />
+          -->
     </application>
 
 </manifest> 

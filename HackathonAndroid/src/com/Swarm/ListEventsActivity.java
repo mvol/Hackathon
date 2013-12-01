@@ -19,22 +19,42 @@ import java.util.Map;
  * To change this template use File | Settings | File Templates.
  */
 public class ListEventsActivity extends Activity implements ResponseHandler {
+    public static final String INTENT_ACTION = "intent_action";
+    public static final int INTENT_ACTION_LOGIN = 0;
+    public static final int INTENT_ACTION_CREATE = 1;
+
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.loading);
 
+
         Intent intent = getIntent();
-        String username = intent.getStringExtra(LoginActivity.USERNAME);
-        String password = intent.getStringExtra(LoginActivity.PASSWORD);
 
-        Map<String,Object> parameters = new HashMap<String, Object>();
-        parameters.put("username", username);
-        parameters.put("password", password);
+        switch(intent.getIntExtra(INTENT_ACTION, 0)){
 
-        TransferContainer tc = new TransferContainer(JSSEProtocol.ACTION_LOGIN, parameters);
-        RequestTask rt = new RequestTask(tc, this);
+            case INTENT_ACTION_LOGIN:
+                String username = intent.getStringExtra(LoginActivity.USERNAME);
+                String password = intent.getStringExtra(LoginActivity.PASSWORD);
 
-        rt.execute("10.60.37.27","8080");
+
+                Map<String,Object> parameters1 = new HashMap<String, Object>();
+                parameters1.put("username", username);
+                parameters1.put("password", password);
+
+                TransferContainer tc1 = new TransferContainer(JSSEProtocol.ACTION_LOGIN, parameters1);
+                RequestTask rt = new RequestTask(tc1, this);
+
+                rt.execute("10.60.37.27","8080");
+                break;
+
+            case INTENT_ACTION_CREATE:
+                Map<String,Object> parameters2 = new HashMap<String, Object>();
+                TransferContainer tc2 = new TransferContainer(JSSEProtocol.ACTION_LOGIN, parameters2);
+
+                break;
+
+        }
+
     }
 
     @Override
