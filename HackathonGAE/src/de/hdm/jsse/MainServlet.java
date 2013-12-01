@@ -17,7 +17,7 @@ import java.io.IOException;
 public class MainServlet extends HttpServlet {
     protected void doPost(HttpServletRequest httpRequest, HttpServletResponse httpResponse) throws IOException {
         System.out.println("INCOMING CONNECTION: POST");
-        System.out.println("REQUEST IS: "+httpRequest.getParameter("content"));
+        // System.out.println("REQUEST IS: "+httpRequest.getParameter("content"));
         Gson gson = new Gson();
 
         String requestString = httpRequest.getParameter("content");
@@ -36,10 +36,12 @@ public class MainServlet extends HttpServlet {
                 break;
             case JSSEProtocol.ACTION_LOGIN:
                 out += "Tried to login as "+transferContainer.parameters.get("username");
+                System.out.println("USER CONNECTED: "+transferContainer.parameters.get("username"));
                 break;
             case JSSEProtocol.ACTION_GET_EVENTS:
                 break;
             case JSSEProtocol.ACTION_NEW_EVENT:
+                System.out.println("CREATING NEW EVENT");
                 break;
         }
 
