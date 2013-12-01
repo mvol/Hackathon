@@ -1,6 +1,7 @@
 package com.Swarm;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -25,6 +26,8 @@ public class EventElementView extends LinearLayout implements View.OnClickListen
         subheadingView.setText(subheading);
         ImageView picView = (ImageView) findViewById(R.id.imgIcon);
         picView.setImageResource(imgSrc);
+        Typeface tf = Typeface.createFromAsset(context.getAssets(), "fonts/Roboto-Regular.ttf");
+        headingView.setTypeface(tf);
     }
 
     @Override
