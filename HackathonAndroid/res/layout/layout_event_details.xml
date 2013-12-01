@@ -1,9 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:text="LOLOLOLO">
 
-</LinearLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+        <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="48dp" android:id="flCreator" android:layout_marginBottom="10dp">
+        </FrameLayout>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BESCHREIBUNG"
+                android:id="@+id/textView" android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="10dp" android:textColor="#cc133c" android:textStyle="bold"/>
+        <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="2dp" android:layout_gravity="right|center_vertical" android:background="#cc133c"
+                android:layout_marginBottom="10dp">
+        </FrameLayout>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text='Wir wiederholen das Thema "Integrale", das letzte Stunde durchgenommen wurde. Taschenrechner mitbringen! '
+                android:id="@+id/tv_desc" android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="10dp"/>
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="TEILNEHMER"
+                  android:id="@+id/textView1"
+                  android:layout_marginLeft="10dp" android:textColor="#cc133c" android:textStyle="bold"/>
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="2dp"
+                     android:background="#cc133c"
+                     android:id="@+id/frameLayout"/>
+        <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="TEILNEHMEN"
+                android:id="@+id/b_join" android:layout_marginTop="20dp"/>
+    </LinearLayout>
+</ScrollView>
