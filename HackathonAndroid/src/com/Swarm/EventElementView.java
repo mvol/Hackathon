@@ -26,7 +26,7 @@ public class EventElementView extends LinearLayout implements View.OnClickListen
         subheadingView.setText(subheading);
         ImageView picView = (ImageView) findViewById(R.id.imgIcon);
         picView.setImageResource(imgSrc);
-        Typeface tf = Typeface.createFromAsset(context.getAssets(), "fonts/Roboto-Regular.ttf");
+        Typeface tf = Typeface.create("Roboto-Regular", Typeface.NORMAL);
         headingView.setTypeface(tf);
     }
 
