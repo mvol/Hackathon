@@ -12,7 +12,7 @@
             android:layout_height="fill_parent">
         <FrameLayout
                 android:layout_width="fill_parent"
-                android:layout_height="48dp" android:id="flCreator" android:layout_marginBottom="10dp">
+                android:layout_height="48dp" android:id="@+id/fl_creator" android:layout_marginBottom="10dp">
         </FrameLayout>
         <TextView
                 android:layout_width="wrap_content"
@@ -36,7 +36,15 @@
                   android:layout_marginLeft="10dp" android:textColor="#cc133c" android:textStyle="bold"/>
         <FrameLayout android:layout_width="fill_parent" android:layout_height="2dp"
                      android:background="#cc133c"
-                     android:id="@+id/frameLayout"/>
+                     android:id="@+id/frameLayout" android:layout_marginBottom="10dp"/>
+        <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="48dp" android:id="@+id/fl_teilnehmer_1">
+        </FrameLayout>
+        <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="48dp" android:id="@+id/fl_teilnehmer_2">
+        </FrameLayout>
         <Button
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
