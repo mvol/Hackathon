@@ -125,6 +125,13 @@ public class TitleActivity extends ActionBarActivity implements ResponseHandler{
                 startActivity(intent);
 
                 return true;
+
+            case R.id.action_profile:
+                intent = new Intent(this, ProfileActivity.class);
+                startActivity(intent);
+
+                return true;
+
         }
         return super.onOptionsItemSelected(item);
     }
