@@ -34,9 +34,6 @@ public class EventElementView extends LinearLayout implements View.OnClickListen
         Typeface tf = Typeface.create("Roboto-Regular", Typeface.NORMAL);
         headingView.setTypeface(tf);
 
-        this.setFocusable(true);
-        this.setFocusableInTouchMode(true);
-
         this.setOnFocusChangeListener(new OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
