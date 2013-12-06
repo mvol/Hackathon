@@ -1,4 +1,4 @@
-package com.Swarm;
+package de.jssm.meetmate;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -16,8 +16,8 @@ import com.example.HackathonAndroid.R;
  * To change this template use File | Settings | File Templates.
  */
 public class LoginActivity extends Activity {
-    public final static String USERNAME = "com.Swarm.USERNAME";
-    public final static String PASSWORD = "com.Swarm.PASSWORD";
+    public final static String USERNAME = "de.jssm.meetmate.USERNAME";
+    public final static String PASSWORD = "de.jssm.meetmate.PASSWORD";
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

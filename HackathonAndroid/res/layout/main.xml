@@ -69,7 +69,7 @@
     android:id="@+id/fragContainer"
     >
 
-  <fragment android:name="com.Swarm.EventListFragment"
+  <fragment android:name="de.jssm.meetmate.EventListFragment"
             android:id="@+id/eventListFragment"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"/>

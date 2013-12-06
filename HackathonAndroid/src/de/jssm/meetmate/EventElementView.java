@@ -1,4 +1,4 @@
-package com.Swarm;
+package de.jssm.meetmate;
 
 import android.content.Context;
 import android.content.Intent;

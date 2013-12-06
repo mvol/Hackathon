@@ -1,4 +1,4 @@
-package com.Swarm;
+package de.jssm.meetmate;
 
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -11,8 +11,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.example.HackathonAndroid.R;
-import de.hdm.jsse.JSSEProtocol;
-import de.hdm.jsse.TransferContainer;
 
 import java.util.ArrayList;
 import java.util.HashMap;

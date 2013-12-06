@@ -1,4 +1,4 @@
-package de.hdm.jsse;
+package de.jssm.meetmate;
 
 /**
  * Created with IntelliJ IDEA.

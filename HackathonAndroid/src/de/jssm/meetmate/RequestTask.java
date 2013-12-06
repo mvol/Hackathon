@@ -1,8 +1,7 @@
-package com.Swarm;
+package de.jssm.meetmate;
 
 import android.os.AsyncTask;
 import com.google.gson.Gson;
-import de.hdm.jsse.TransferContainer;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
 import org.apache.http.NameValuePair;

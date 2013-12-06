@@ -1,6 +1,4 @@
-package com.Swarm;
-
-import de.hdm.jsse.TransferContainer;
+package de.jssm.meetmate;
 
 /**
  * Created with IntelliJ IDEA.

@@ -7,11 +7,11 @@
 
     <servlet>
         <servlet-name>MainServlet</servlet-name>
-        <servlet-class>de.hdm.jsse.MainServlet</servlet-class>
+        <servlet-class>de.jssm.meetmate.MainServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>SetupServlet</servlet-name>
-        <servlet-class>de.hdm.jsse.SetupServlet</servlet-class>
+        <servlet-class>de.jssm.meetmate.SetupServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>MainServlet</servlet-name>

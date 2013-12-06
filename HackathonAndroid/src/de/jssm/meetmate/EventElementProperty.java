@@ -1,4 +1,4 @@
-package com.Swarm;
+package de.jssm.meetmate;
 public class EventElementProperty {
    String heading;
    String subheading;

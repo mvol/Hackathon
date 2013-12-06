@@ -1,4 +1,4 @@
-package de.hdm.jsse;
+package de.jssm.meetmate;
 
 import javax.jdo.JDOHelper;
 import javax.jdo.PersistenceManagerFactory;

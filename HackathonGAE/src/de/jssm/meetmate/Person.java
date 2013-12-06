@@ -1,4 +1,4 @@
-package de.hdm.jsse;
+package de.jssm.meetmate;
 
 import com.google.appengine.api.datastore.Blob;
 import com.google.appengine.api.datastore.Key;

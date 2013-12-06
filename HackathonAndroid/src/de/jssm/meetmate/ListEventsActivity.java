@@ -1,12 +1,10 @@
-package com.Swarm;
+package de.jssm.meetmate;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 import com.example.HackathonAndroid.R;
-import de.hdm.jsse.JSSEProtocol;
-import de.hdm.jsse.TransferContainer;
 
 import java.util.HashMap;
 import java.util.Map;

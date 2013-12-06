@@ -1,4 +1,4 @@
-package com.Swarm;
+package de.jssm.meetmate;
 
 import android.app.Activity;
 import android.support.v4.app.Fragment;

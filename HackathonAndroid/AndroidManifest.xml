@@ -22,34 +22,34 @@
                  android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
                  android:uiOptions="splitActionBarWhenNarrow"
                 android:icon="@drawable/logo_small">
-        <activity android:name="com.Swarm.TestActivity">
+        <activity android:name="de.jssm.meetmate.TestActivity">
             <meta-data android:name="android.support.UI_OPTIONS"
                        android:value="splitActionBarWhenNarrow" />
 
         </activity>
-      <activity android:name="com.Swarm.TitleActivity" android:screenOrientation="portrait">
+      <activity android:name="de.jssm.meetmate.TitleActivity" android:screenOrientation="portrait">
 
       </activity>
-      <activity android:name="com.Swarm.LoginActivity" android:screenOrientation="portrait">
+      <activity android:name="de.jssm.meetmate.LoginActivity" android:screenOrientation="portrait">
           <intent-filter>
               <action android:name="android.intent.action.MAIN"/>
               <category android:name="android.intent.category.LAUNCHER"/>
           </intent-filter>
       </activity>
-      <activity android:name="com.Swarm.ListEventsActivity" />
-      <activity android:name="com.Swarm.CreateEventActivity">
+      <activity android:name="de.jssm.meetmate.ListEventsActivity" />
+      <activity android:name="de.jssm.meetmate.CreateEventActivity">
         <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.Swarm.TitleActivity" />
 
       </activity>
-        <activity android:name="com.Swarm.ProfileActivity">
+        <activity android:name="de.jssm.meetmate.ProfileActivity">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value="com.Swarm.TitleActivity" />
         </activity>
 
-      <activity android:name="com.Swarm.EventDetailsActivity">
+      <activity android:name="de.jssm.meetmate.EventDetailsActivity">
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
             android:value="com.Swarm.TitleActivity" />
